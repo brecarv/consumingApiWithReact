@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     setAppState({ loading: true });
-    const apiUrl = `https://api.github.com/users/hacktivist123/repos`;
+    const apiUrl = `https://api.github.com/users/brecarv/repos`;
     fetch(apiUrl)
       .then((res) => res.json())
       .then((repos) => {
