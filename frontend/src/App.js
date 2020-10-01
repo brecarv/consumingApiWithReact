@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './App.css';
 import List from './components/List';
 import withListLoading from './components/withListLoading';
+
 function App() {
   const ListLoading = withListLoading(List);
   const [appState, setAppState] = useState({
@@ -12,11 +14,15 @@ function App() {
   useEffect(() => {
     setAppState({ loading: true });
     const apiUrl = `https://api.github.com/users/brecarv/repos`;
-    fetch(apiUrl)
-      .then((res) => res.json())
-      .then((repos) => {
-        setAppState({ loading: false, repos: repos });
-      });
+    /* fetch(apiUrl)
+    .then((res) => res.json())
+    .then((repos) => {
+    setAppState({ loading: false, repos: repos });
+    }); */
+    axios.get(apiUrl).then((repos) => {
+      const allRepos = repos.data;
+      setAppState({loading: false, repos: allRepos});
+    });
   }, [setAppState]);
   return (
     <div className='App'>
