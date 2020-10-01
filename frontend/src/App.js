@@ -13,16 +13,9 @@ function App() {
 
   useEffect(() => {
     setAppState({ loading: true });
-    //const apiUrl = `https://api.github.com/users/brecarv/`;
-    //
     
     const apiUrl = `https://carnvnode.herokuapp.com/api/artigos`;
-    //const apiUrl = `http://localhost:3000/api/artigos/`
-    /* fetch(apiUrl)
-    .then((res) => res.json())
-    .then((artigos) => {
-    setAppState({ loading: false, artigos: artigos });
-    }); */
+
     axios.get(apiUrl).then((artigos) => {
       const todosArtigos = artigos.data.artigos;
       setAppState({loading: false, artigos: todosArtigos});
