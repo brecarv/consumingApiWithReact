@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root {
   --basic-color: #23cc71;
 }
@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   font-family: 'Amiri', serif;
   overflow: hidden;
 }
@@ -16,11 +16,11 @@
   flex-direction: row;
 }
 .container h1 {
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
   color: var(--basic-color);
 }
-.repo-container {
+.artigo-container {
   width: 50%;
   height: 700px;
   margin: 50px;
@@ -28,16 +28,26 @@
   overflow: scroll;
 }
 @media screen and (max-width: 600px) {
-  .repo-container {
+  .artigo-container {
     width: 100%;
     margin: 0;
     box-shadow: none;
   }
 }
-.repo-text {
+.artigo-text {
   font-weight: 600;
 }
-.repo-description {
+.artigo-description {
+  font-weight: 600;
+  font-style: bold;
+  color: var(--basic-color);
+}
+.artigo-slug {
+  font-weight: 600;
+  font-style: bold;
+  color: #114911
+}
+.artigo-autor {
   font-weight: 600;
   font-style: bold;
   color: var(--basic-color);
