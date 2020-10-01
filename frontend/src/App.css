@@ -20,7 +20,7 @@
   text-align: center;
   color: var(--basic-color);
 }
-.repo-container {
+.artigo-container {
   width: 50%;
   height: 700px;
   margin: 50px;
@@ -28,16 +28,16 @@
   overflow: scroll;
 }
 @media screen and (max-width: 600px) {
-  .repo-container {
+  .artigo-container {
     width: 100%;
     margin: 0;
     box-shadow: none;
   }
 }
-.repo-text {
+.artigo-text {
   font-weight: 600;
 }
-.repo-description {
+.artigo-description {
   font-weight: 600;
   font-style: bold;
   color: var(--basic-color);
