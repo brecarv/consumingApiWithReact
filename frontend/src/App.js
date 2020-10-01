@@ -29,15 +29,6 @@ function App() {
       <div className='artigo-container'>
         <ListLoading isLoading={appState.loading} artigos={appState.artigos} />
       </div>
-      <footer>
-        <div className='footer'>
-          Built{' '}
-          <span role='img' aria-label='love'>
-            💚
-          </span>{' '}
-          with by Shedrack Akintayo
-        </div>
-      </footer>
     </div>
   );
 }

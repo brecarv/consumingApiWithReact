@@ -4,12 +4,13 @@ const List = (props) => {
   if (!artigos || artigos.length === 0) return <p>Sem artigos, sorry!</p>;
   return (
     <ul>
-      <h2 className='list-head'>Artigos Cadastrados</h2>
       {artigos.map((artigo) => {
         return (
           <li key={artigo.slug} className='list'>
             <span className='artigo-text'>{artigo.titulo} </span>
-            <span className='artigo-description'>{artigo.descricao}</span>
+            <span className='artigo-description'>{artigo.descricao} </span>
+            <span className='artigo-slug'>{artigo.slug} </span>
+            <span className='artigo-autor'>{artigo.autor.username} </span>
           </li>
         );
       })}
